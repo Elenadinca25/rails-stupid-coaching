@@ -1,0 +1,17 @@
+<div class="response">
+<h1>Stupid Coaching</h1>
+<div class="grey">
+<p id="question">You: <%= @helena %></p>
+</div>
+
+<% if @helena.ends_with?('?')%>
+   <p id="answer">Your coach: <%=  @answer = "Silly question, get dressed and go to work!"%>
+    <% elsif @helena == "I'm going to work"%>
+      <%= @answer = "Great!" %>
+    <%else%>
+     <p id="answer">Your coach: <%=@answer = "I don't care, get dressed and go to work!"%>
+    <%end%>
+    <br>
+    <p class="ask-again"<button><%= link_to 'Ask again', ask_path %></button></p>
+</div>
+
